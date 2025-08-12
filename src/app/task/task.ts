@@ -10,6 +10,4 @@ import { DUMMY_USERS } from '../dummy-users';
 
 export class Task {
   @Input({required:true}) name!: string;
-  // name = DUMMY_USERS[this.id]
-  
 }

@@ -13,14 +13,6 @@ export class User {
   @Input({required: true}) id !: string;
   @Output() select = new EventEmitter();
 
-  // select = output<string>(); 
-
-  // avatar = input.required<string>();
-  // name = input.required<string>();
-
-  // imagePath = computed(() => {
-  //   return this.avatar();
-  // }) 
   get imagePath() {
     return this.avatar;
   }

@@ -9,5 +9,5 @@ import { DUMMY_USERS } from '../dummy-users';
 })
 
 export class Task {
-  @Input({required:true}) name!: string;
+  @Input() name?: string;
 }

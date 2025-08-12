@@ -13,8 +13,9 @@ import { Task } from "./task/task";
 export class App {
   protected readonly title = signal('Hikely');
   users = DUMMY_USERS
-
+  selectedUser=""
+  
   onSelectUser(id:string ) {
-    console.log('Selected user ID:', id);
+    this.selectedUser = id
   }
 }

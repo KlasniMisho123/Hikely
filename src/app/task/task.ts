@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { DUMMY_USERS } from '../dummy-users';
 
 @Component({
   selector: 'app-task',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   templateUrl: './task.html',
   styleUrl: './task.css'
 })
-export class Task {
 
+export class Task {
+  @Input({required:true}) name!: string;
+  // name = DUMMY_USERS[this.id]
+  
 }

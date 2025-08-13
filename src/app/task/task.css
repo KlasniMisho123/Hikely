@@ -4,6 +4,26 @@
   max-height: 60vh;
   overflow: auto;
   background-color: #3a2c54;
+
+  scroll-behavior: smooth;
+}
+
+#tasks::-webkit-scrollbar {
+  width: 8px;
+}
+
+#tasks::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+#tasks::-webkit-scrollbar-thumb {
+  background-color: #2a2929;
+  border-radius: 4px;
+}
+
+#tasks {
+  scrollbar-width: thin;
+  scrollbar-color: #000 transparent;
 }
 
 header {

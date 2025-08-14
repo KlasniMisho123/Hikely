@@ -44,4 +44,7 @@ export class Task {
     this.tasks = this.tasks.filter((task) => task.id !== id)
   }
 
+  handleAddButton() {
+    console.log("Add THE TASK")
+  }
 }

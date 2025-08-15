@@ -56,4 +56,8 @@ export class Task {
   onCancelTask() {
     this.isAddingTask = false;
   }
+
+  onAddTask(taskData) {
+    this.tasks.push()
+  }
 }

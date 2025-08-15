@@ -1,5 +1,7 @@
+import { type NewTaskData } from "./task-component/task-component.model"
+
 class TaskService {
-      tasks = [
+  private tasks = [
       {
         id: 't1',
         userId: 'u1',
@@ -24,4 +26,22 @@ class TaskService {
         dueDate: '2024-06-15',
       },
     ]
+
+    getUserTasks(userId:string) {
+        return this.tasks.filter((task)=> task.userId === userId)
+    }
+
+    addTask(taskData: NewTaskData, userId: string) {
+      this.tasks.unshift({
+        id: new Date().getTime().toString(),
+        userId: userId,
+        title: taskData.title,
+        summary: taskData.summary,
+        dueDate: taskData.date,
+      })
+    }
+
+    removeTask(id:string) {
+         this.tasks = this.tasks.filter((task) => task.id !== id)
+    }
 }

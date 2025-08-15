@@ -10,6 +10,9 @@ import { TaskComponent } from './task-component/task-component';
 export class Task {
   @Input({required:true}) userId!: string;
   @Input({required:true}) name!: string;
+
+  isAddingTask = false;
+
   tasks = [
   {
     id: 't1',
@@ -44,7 +47,7 @@ export class Task {
     this.tasks = this.tasks.filter((task) => task.id !== id)
   }
 
-  handleAddButton() {
-    console.log("Add THE TASK")
+  onStartAddTask() {
+    this.isAddingTask = true;
   }
 }

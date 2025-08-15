@@ -1,6 +1,6 @@
 import { type NewTaskData } from "./task-component/task-component.model"
 
-class TaskService {
+export class TaskService {
   private tasks = [
       {
         id: 't1',
@@ -42,6 +42,6 @@ class TaskService {
     }
 
     removeTask(id:string) {
-         this.tasks = this.tasks.filter((task) => task.id !== id)
+        this.tasks = this.tasks.filter((task) => task.id !== id)
     }
 }

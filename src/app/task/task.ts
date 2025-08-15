@@ -15,14 +15,15 @@ export class Task {
   @Input({required:true}) userId!: string;
   @Input({required:true}) name!: string;
   isAddingTask = false;
-  private taskService = new TaskService();
+
+  constructor(private taskService: TaskService) {}
 
   get selectedUserTasks() {
     return this.taskService.getUserTasks(this.userId)
   }
 
   onCompleteTask(id:string) {
-    return this.taskService.removeTask()
+    return this.taskService.removeTask(this.userId)
   }
 
   onStartAddTask() {

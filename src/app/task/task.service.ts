@@ -50,11 +50,12 @@ export class TaskService {
         summary: taskData.summary,
         dueDate: taskData.date,
       })
+      this.saveTasks();
     }
 
     removeTask(id:string) {
         this.tasks = this.tasks.filter((task) => task.id !== id)
-        this.saveTasks()
+        this.saveTasks();
     }
 
     private saveTasks() {

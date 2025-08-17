@@ -4,7 +4,8 @@ import { TaskService } from '../task.service';
 @Component({
   selector: 'app-new-task',
   templateUrl: './new-task.html',
-  styleUrl: './new-task.css'
+  styleUrl: './new-task.css',
+  standalone: false,
 })
 export class NewTask {
   @Input({required: true}) userId!:string;

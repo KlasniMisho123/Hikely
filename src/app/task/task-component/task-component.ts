@@ -1,7 +1,5 @@
-import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
+import { Component, inject, Input} from '@angular/core';
 import { Task } from './task-component.model';
-import { Card } from "../../shared/card/card";
-import { DatePipe } from '@angular/common';
 import { TaskService } from '../task.service';
 
 @Component({

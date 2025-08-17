@@ -9,6 +9,7 @@ import { Card } from "./shared/card/card";
 import { DatePipe } from "@angular/common";
 import { Task } from "./task/task";
 import { NewTask } from "./task/new-task/new-task";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
     declarations: [
@@ -17,11 +18,11 @@ import { NewTask } from "./task/new-task/new-task";
         User,
         Card,
         TaskComponent,
-        DatePipe,
         Task,
         NewTask,
     ],
     bootstrap: [App],
+    imports: [BrowserModule, FormsModule]
 })
 
 export class AppModule {

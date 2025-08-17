@@ -4,7 +4,6 @@ import { BrowserModule } from "@angular/platform-browser";
 import { App } from "./app"; 
 import { HeaderComponent } from "./header/header";
 import { User } from "./user/user";
-import { FormsModule } from "@angular/forms";
 import { SharedModule } from "./shared/shared.module";
 import { TasksModule } from "./task/task.module";
 

@@ -12,6 +12,7 @@ import { TasksModule } from "./task/task.module";
         App,
         HeaderComponent,
         User,
+        
     ],
     bootstrap: [App],
     imports: [BrowserModule, SharedModule, TasksModule]

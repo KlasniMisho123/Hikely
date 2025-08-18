@@ -7,12 +7,8 @@ import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 
 @NgModule({
-    declarations: [
-        TaskComponent,
-        Task,
-        NewTask,
-    ],
+    declarations: [TaskComponent, Task, NewTask],
+    exports: [Task],
     imports: [SharedModule, CommonModule, FormsModule],
-    exports: [TaskComponent],
 })
 export class TasksModule {}
